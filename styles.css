@@ -1,0 +1,116 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-name {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.profile-tags {
+    margin-bottom: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 5px;
+    font-size: 12px;
+}
+
+.location {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.readme-btn {
+    margin: 15px 0;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.icon {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.skills-section, .contact-section {
+    width: 48%;
+    text-align: left;
+}
+
+.skills-section h2, .contact-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.skills-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-section li {
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    word-break: break-all;
+    white-space: nowrap;   
+    overflow: hidden;     
+    text-overflow: ellipsis;
+}
+
+.contact-info i {
+    margin-right: 8px;
+}
+
+.contact-section {
+    max-width: 180px; 
+}
