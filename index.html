@@ -5,254 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Profile</title>
-   
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        body {
-            background-color: #f4f6f9;
-            font-family: 'Poppins', sans-serif;
-            animation: fadeIn 1.5s ease-in-out;
-        }
 
-        .hero {
-            background: url('image1.jpg') center/cover no-repeat;
-            height: 500px;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            animation: slideIn 2s ease-in-out;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-            font-weight: bold;
-            font-size: 2rem;
-            color: #333;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .profile-container {
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-top: -100px;
-            animation: slideUp 1s ease-out;
-        }
-
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .service-card {
-            width: 300px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-            margin: 15px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-card img {
-            width: 100%;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-
-        .service-card .card-body {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .team {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .team-member {
-            width: 250px;
-            margin: 15px;
-            text-align: center;
-        }
-
-        .team-member img {
-            width: 100%;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-
-        .testimonials {
-            background-color: #f9f9f9;
-            padding: 40px 20px;
-        }
-
-        .testimonial {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .testimonial img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            padding: 10px 0;
-            background-color: #f4f6f9;
-            font-size: 0.9rem;
-            color: #7f8c8d;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .profile-header {
-            background-color: #f7f9fc;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border: 5px solid #3498db;
-        }
-
-        .profile-name {
-            font-size: 2rem;
-            color: #333333;
-            font-weight: 700;
-        }
-
-        .location {
-            color: #7f8c8d;
-        }
-
-        .badge {
-            padding: 0.5em 1em;
-            font-size: 1rem;
-        }
-
-        .badge-primary {
-            background-color: #3498db;
-        }
-
-        .badge-secondary {
-            background-color: #2ecc71;
-        }
-
-        .badge-danger {
-            background-color: #e74c3c;
-        }
-
-        .social-icons .icon {
-            color: #333;
-        }
-
-        .social-icons .icon:hover {
-            color: #3498db;
-        }
-
-        .info-section {
-            margin-top: 20px;
-        }
-
-        .card {
-            margin-bottom: 15px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-header {
-            background-color: #3498db;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-
-        .card-body {
-            padding: 1.5rem;
-        }
-
-        .projects-section .card-img-top {
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-
-        .projects-section .card {
-            margin-bottom: 30px;
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes slideIn {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(0); }
-        }
-
-        @keyframes slideUp {
-            0% { transform: translateY(30px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="hero">
         <div>
             <h1>Welcome to my profile, I'm Nguyen Trong Phuc</h1>
-            <b>Java Developer</b>
+            <marquee style="font-size: 50px;">Java Developer</marquee>
+            <div class="loader"></div>
         </div>
     </div>
 
     <div class="container mt-5">
         <div class="profile-container">
             <div class="profile-header text-center">
-                <img src="mee.jpg" alt="Profile Picture" class="profile-pic rounded-circle img-fluid mb-3">
+                <img src="image/mee.jpg" alt="Profile Picture" class="profile-pic rounded-circle img-fluid mb-3">
                 <h1 class="profile-name mb-1">Nguyen Trong Phuc</h1>
                 <div class="profile-tags mb-3">
                     <span class="badge badge-primary"><i class="fa-solid fa-code"></i> Coder</span>
@@ -260,60 +32,74 @@
                     <span class="badge badge-danger"><i class="fa-solid fa-bug"></i> Bug</span>
                 </div>
                 <p class="location text-muted mb-3"><i class="fa-solid fa-map-marker-alt"></i> Ho Chi Minh, Vietnam</p>
-                <div class="social-icons">
-                    <a href="https://github.com/Phucabcd" class="icon github mx-2"><i
-                            class="fa-brands fa-github fa-2x"></i></a>
-                    <a href="https://www.instagram.com/tphucabcd/" class="icon instagram mx-2"><i
-                            class="fa-brands fa-instagram fa-2x"></i></a>
-                    <a href="https://phucabcd.github.io/cv_ntp/" class="icon globe mx-2"><i class="fa-solid fa-globe fa-2x"></i></a>
-                    <a href="https://www.linkedin.com/in/phucabcd/" class="icon globe mx-2"><i class="fa-brands fa-linkedin fa-2x"></i></a>
-                </div>
-            </div>
 
-            <div class="info-section row mt-4">
-                <div class="skills-section col-md-6">
-                    <div class="card shadow-sm">
-                        <div class="card-header bg-primary text-white">
-                            <h2 class="h5 mb-0"><i class="fa-solid fa-gear"></i> Skills</h2>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    <b style="color: blue;"><i class="fa-solid fa-code"></i> Programming Languages</b>: Java
-                                </li>
-                                <li class="list-group-item">
-                                    <b style="color: red;"><i class="fa-solid fa-cubes"></i> Frameworks</b>: Spring Boot, Angular
-                                </li>
-                                <li class="list-group-item">
-                                    <b style="color: green;"><i class="fa-solid fa-puzzle-piece"></i> Libraries</b>: jQuery, Bootstrap, String MVC
-                                </li>
-                                <li class="list-group-item">
-                                    <b style="color: orange;"><i class="fa-solid fa-code"></i> Other Skills</b>: HTML, CSS, Github, Trello
-                                </li>
-                            </ul>
-                        </div>
+                <div class="card2">
+                    <span>Social</span>
+                    <div class="social-icons">
+                        <a href="https://github.com/Phucabcd" class="icon github mx-2"><i
+                                class="fa-brands fa-github fa-2x"></i></a>
+                        <a href="https://www.instagram.com/tphucabcd/" class="icon instagram mx-2"><i
+                                class="fa-brands fa-instagram fa-2x"></i></a>
+                        <a href="https://phucabcd.github.io/cv_ntp/" class="icon globe mx-2"><i
+                                class="fa-solid fa-globe fa-2x"></i></a>
+                        <a href="https://www.linkedin.com/in/phucabcd/" class="icon globe mx-2"><i
+                                class="fa-brands fa-linkedin fa-2x"></i></a>
                     </div>
                 </div>
 
-                <div class="contact-section col-md-6">
-                    <div class="card shadow-sm">
-                        <div class="card-header bg-success text-white">
-                            <h2 class="h5 mb-0"><i class="fa-solid fa-address-book"></i> Contact</h2>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    <i style="color: yellowgreen;" class="fa-regular fa-envelope"></i> : nguyentrongphuc03@gmail.com
-                                </li>
-                                <li class="list-group-item">
-                                    <i style="color: blueviolet;" class="fa-solid fa-phone"></i> : +84911870319
-                                </li>
-                            </ul>
-                        </div>
+            </div>
+        </div>
+
+
+        <div class="info-section row mt-4">
+            <div class="skills-section col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="h5 mb-0"><i class="fa-solid fa-gear"></i> Skills</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <b style="color: blue;"><i class="fa-solid fa-code"></i> Programming Languages</b>:
+                                Java
+                            </li>
+                            <li class="list-group-item">
+                                <b style="color: red;"><i class="fa-solid fa-cubes"></i> Frameworks</b>: Spring
+                                Boot, Angular
+                            </li>
+                            <li class="list-group-item">
+                                <b style="color: green;"><i class="fa-solid fa-puzzle-piece"></i> Libraries</b>:
+                                jQuery, Bootstrap, String MVC
+                            </li>
+                            <li class="list-group-item">
+                                <b style="color: orange;"><i class="fa-solid fa-code"></i> Other Skills</b>: HTML,
+                                CSS, Github, Trello
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-section col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="h5 mb-0"><i class="fa-solid fa-address-book"></i> Contact</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <i style="color: yellowgreen;" class="fa-regular fa-envelope"></i> :
+                                nguyentrongphuc03@gmail.com
+                            </li>
+                            <li class="list-group-item">
+                                <i style="color: blueviolet;" class="fa-solid fa-phone"></i> : +84911870319
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <footer>
