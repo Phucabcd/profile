@@ -6,7 +6,7 @@ body {
 }
 
 .hero {
-    background: url('/image/image1.jpg') center/cover no-repeat;
+    background: url('image1.jpg') center/cover no-repeat;
     height: 500px;
     color: white;
     display: flex;
