@@ -1,11 +1,10 @@
-
 body {
     background-color: #f4f6f9;
     font-family: 'Poppins', sans-serif;
     animation: fadeIn 1.5s ease-in-out;
 }
 
-.hero {
+/* .hero {
     background: url('image1.jpg') center/cover no-repeat;
     height: 500px;
     color: white;
@@ -14,7 +13,7 @@ body {
     justify-content: center;
     text-align: center;
     animation: slideIn 2s ease-in-out;
-}
+} */
 
 .hero h1 {
     font-size: 3rem;
