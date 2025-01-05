@@ -8,21 +8,12 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    .hero {
-    background: url('backround.jpg') center/cover no-repeat;
-    height: 500px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    animation: slideIn 2s ease-in-out;
-}
-</style>
 
 <body>
     <div class="hero">
@@ -33,7 +24,7 @@
         </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container">
         <div class="profile-container">
             <div class="profile-header text-center">
                 <img src="avt.jpg" alt="Profile Picture" class="profile-pic rounded-circle img-fluid mb-3">
@@ -46,7 +37,7 @@
                 <p class="location text-muted mb-3"><i class="fa-solid fa-map-marker-alt"></i> Ho Chi Minh, Vietnam</p>
 
                 <div class="card2">
-                    <span>Social</span>
+                    <span class="bg-success">Social</span>
                     <div class="social-icons">
                         <a href="https://github.com/Phucabcd" class="icon github mx-2"><i
                                 class="fa-brands fa-github fa-2x"></i></a>
@@ -62,54 +53,150 @@
             </div>
         </div>
 
-
-        <div class="info-section row mt-4">
-            <div class="skills-section col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
-                        <h2 class="h5 mb-0"><i class="fa-solid fa-gear"></i> Skills</h2>
+        <div class="description-section mt-2">
+            <h2 class="skills-title">Description</h2>
+            <div class="info-section row mt-4">
+                <div class="col-6">
+                    <div class="contact-section">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-success text-white">
+                                <h2 class="h5 mb-0"><i class="fa-solid fa-address-book"></i> Headline </h2>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <p>I am a Java programmer with one year of experience. I am proficient in Object-Oriented Programming (OOP) using Java Core and have experience with the Spring framework (Spring Boot ,Spring MVC, Spring Security).</p>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="col-6">
+                    <div class="contact-section">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-success text-white">
+                                <h2 class="h5 mb-0"><i class="fa-solid fa-address-book"></i> Contact</h2>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <i style="color: yellowgreen;" class="fa-regular fa-envelope"></i> :
+                                        nguyentrongphuc03@gmail.com
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i style="color: blueviolet;" class="fa-solid fa-phone"></i> : +84911870319
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="info-section row mt-2">
+            <h2 class="skills-title">Development Skills</h2>
+            <div class="skills-section col-md-12">
+                <div class="card shadow-sm">
                     <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <b style="color: blue;"><i class="fa-solid fa-code"></i> Programming Languages</b>:
-                                Java
-                            </li>
-                            <li class="list-group-item">
-                                <b style="color: red;"><i class="fa-solid fa-cubes"></i> Frameworks</b>: Spring
-                                Boot, Angular
-                            </li>
-                            <li class="list-group-item">
-                                <b style="color: green;"><i class="fa-solid fa-puzzle-piece"></i> Libraries</b>:
-                                jQuery, Bootstrap, String MVC
-                            </li>
-                            <li class="list-group-item">
-                                <b style="color: orange;"><i class="fa-solid fa-code"></i> Other Skills</b>: HTML,
-                                CSS, Github, Trello
-                            </li>
-                        </ul>
+                        <div class="swiper skills-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide skill-item">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title text-primary"><i class="fa-solid fa-code"></i>
+                                                Programming Languages</h5>
+                                            <p class="card-text">Java</p>
+                                            <div class="skill-images">
+                                                <img src="image/java.png" alt="Java Logo" class="img-fluid rounded"
+                                                    style="height: 100px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide skill-item">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title text-danger"><i class="fa-solid fa-cubes"></i>
+                                                Frameworks</h5>
+                                            <p class="card-text">Spring, Angular</p>
+                                            <div class="skill-images">
+                                                <img src="image/spring.webp" alt="Java Logo" class="img-fluid rounded"
+                                                    style="height: 100px;">
+                                                <img src="image/springboot.png" alt="Java Logo"
+                                                    class="img-fluid rounded" style="height: 100px;">
+                                                <img src="image/spring-security.png" alt="Java Logo"
+                                                    class="img-fluid rounded" style="height: 100px;">
+                                                <img src="image/angularjs.png" alt="Java Logo" class="img-fluid rounded"
+                                                    style="height: 100px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide skill-item">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title text-success"><i class="fa-solid fa-puzzle-piece"></i>
+                                                Libraries</h5>
+                                            <p class="card-text">jQuery, Bootstrap</p>
+                                            <div class="skill-images">
+                                                <img src="image/jquery.png" alt="Java Logo" class="img-fluid rounded"
+                                                    style="height: 100px;">
+                                                <img src="image/bootstrap.jpg" alt="Java Logo" class="img-fluid rounded"
+                                                    style="height: 100px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide skill-item">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title text-warning"><i class="fa-solid fa-puzzle-piece"></i>
+                                                Database</h5>
+                                            <p class="card-text">My SQL, SQL Server</p>
+                                            <div class="skill-images">
+                                                <img src="image/mysql.avif" alt="Java Logo" class="img-fluid rounded"
+                                                    style="height: 100px;">
+                                                <img src="image/sqlserver.png" alt="Java Logo" class="img-fluid rounded"
+                                                    style="height: 100px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide skill-item">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title text-info"><i class="fa-solid fa-puzzle-piece"></i>
+                                                Order skill</h5>
+                                            <p class="card-text">Github, Canva, Linux, Html & Css & Javascript</p>
+                                            <div class="skill-images">
+                                                <img src="image/github.jpg" alt="Java Logo" class="img-fluid rounded"
+                                                    style="height: 100px;">
+                                                <img src="image/canva.png" alt="Java Logo" class="img-fluid rounded"
+                                                    style="height: 100px;">
+                                                <img src="image/linux.png" alt="Java Logo" class="img-fluid rounded"
+                                                    style="height: 100px;">
+                                                <img src="image/htmlcssjs.png" alt="Java Logo" class="img-fluid rounded"
+                                                    style="height: 100px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="contact-section col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-success text-white">
-                        <h2 class="h5 mb-0"><i class="fa-solid fa-address-book"></i> Contact</h2>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <i style="color: yellowgreen;" class="fa-regular fa-envelope"></i> :
-                                nguyentrongphuc03@gmail.com
-                            </li>
-                            <li class="list-group-item">
-                                <i style="color: blueviolet;" class="fa-solid fa-phone"></i> : +84911870319
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
     </div>
@@ -121,6 +208,36 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.skills-swiper', {
+            // loop: true,
+            parallax: true, // Bật hiệu ứng Parallax
+            effect: "cube",
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 5,
+                shadowScale: 0.4,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000, // Thời gian chờ (tính bằng mili giây), 3000 = 3 giây
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+
+
+
+    </script>
 </body>
 
 </html>
