@@ -19,7 +19,18 @@
     <div class="hero">
         <div>
             <h1>Welcome to my profile, I'm Nguyen Trong Phuc</h1>
-            <marquee style="font-size: 50px;">Java Developer</marquee>
+            <marquee style="
+                font-size: 50px; 
+                font-weight: bold; 
+                color: white; 
+                text-shadow: 2px 2px 5px black; 
+                background: linear-gradient(90deg, #b0d3f6, #2a9af6);
+                padding: 10px;
+                border-radius: 10px;
+                border: 2px solid #ffffff;
+            ">
+                Java Developer
+            </marquee>
             <div class="loader"></div>
         </div>
     </div>
@@ -217,9 +228,10 @@
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div>
         </div>
-        <p style="color: red; font-size: 10px; text-align: right;">Lưu ý ! cube bị lỗi next :> hãy sử dụng prev để tránh bug</p>
+        <!-- <p style="color: red; font-size: 10px; text-align: right;">Lưu ý ! cube bị lỗi next :> hãy sử dụng prev để tránh
+            bug</p> -->
     </div>
     </div>
 
@@ -234,11 +246,45 @@
         const swiper = new Swiper('.skills-swiper', {
             loop: true,
             parallax: true,
+            effect: "creative",
+            creativeEffect: {
+                prev: {
+                    translate: ["-120%", 0, -500],
+                    opacity: 0,
+                    scale: 0.8,
+                },
+                next: {
+                    translate: ["120%", 0, -500],
+                    opacity: 0,
+                    scale: 0.8,
+                },
+                shadow: true,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
+    <!-- <script>
+        const swiper = new Swiper('.skills-swiper', {
+            loop: true,
+            parallax: true,
             effect: 'cube',
             cubeEffect: {
                 shadow: true,
                 slideShadows: true,
-                shadowOffset: 5,
+                shadowOffset: 100,
                 shadowScale: 0.4,
             },
             pagination: {
@@ -253,40 +299,6 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-        });
-    </script>
-    <!-- <script>
-        const swiper = new Swiper('.skills-swiper', {
-            loop: true,
-            parallax: true, // Bật hiệu ứng Parallax
-            effect: "creative",
-            creativeEffect: {
-                prev: {
-                    translate: ["-120%", 0, -500], // Di chuyển slide trước
-                    opacity: 0,
-                    scale: 0.8,
-                },
-                next: {
-                    translate: ["120%", 0, -500], // Di chuyển slide tiếp theo
-                    opacity: 0,
-                    scale: 0.8,
-                },
-                shadow: true,
-                slideShadows: true,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
         });
     </script> -->
 </body>
